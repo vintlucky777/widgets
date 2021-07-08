@@ -2,6 +2,23 @@
     box-sizing: border-box;
 }
 
+@media (prefers-color-scheme: light) {
+    body {
+        --prefers-color-scheme: "light";
+        --font-color: #222;
+        --background-color: #fff;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --prefers-color-scheme: "dark";
+        --font-color: #ddd;
+        --background-color: #222;
+    }
+}
+
+
 body {
     margin: 0;
     padding: 0;
