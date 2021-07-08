@@ -13,9 +13,9 @@ function App() {
     <div className="App">
       <Flex alignItems='center' justifyContent='center' style={{ width: '100vw', minHeight: '100vh' }}>
         <div style={{ maxWidth: 'calc(100vw - 2rem)', width: '100%' }}>
-          <Spacer size='2rem' />
+          <Spacer size='sm' />
           <ProgressBars />
-          <Spacer size='2rem' />
+          <Spacer size='sm' />
         </div>
       </Flex>
     </div>
