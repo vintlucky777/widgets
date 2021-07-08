@@ -1,14 +1,16 @@
 import React from 'react'
 import _ from 'lodash'
 import useHashQuery from '../hooks/useHashQuery'
-import { getHashQuery } from '../utils'
+import { getSearchQuery } from '../utils'
 import Card from '../components/card'
 import { Flex, FlexItem } from '../components/flex'
 import ProgressBar from '../components/progress-bar'
 import styles from './progress-bars.module.css'
 
 export default function ProgressBars() {
-    let { title, attrs, progress, barColors, labels } = useHashQuery()
+    const hashQuery = useHashQuery()
+    const query = !_.isEmpty(hashQuery) ? hashQuery : getSearchQuery()
+    let { title, attrs, progress, barColors, labels } = query
     attrs = (attrs || '').split(',')
     progress = (progress || '').split(',').map(v => parseFloat(v))
     barColors = (barColors || '').split(',')
