@@ -14,7 +14,6 @@ export default function ProgressBars() {
     barColors = (barColors || '').split(',')
     labels = (labels || '').split(',')
     const barConfigs = _.zip(attrs, progress, barColors, labels)
-    console.log(barConfigs)
     return (
         <Card className={styles.card}>
             <h2>{title}</h2>
